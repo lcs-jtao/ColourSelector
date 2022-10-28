@@ -12,8 +12,9 @@ struct ContentView: View {
     // MARK: Stored Properties
     @State private var selectedHue = 0.0
     
-    // tracks the list of saved palettes
-    @State private var savedPalettes: [SavedPalette] = []
+    // Tracks the list of saved palettes
+    // "Derived Value"
+    @Binding var savedPalettes: [SavedPalette]
     
     // MARK: Computed Properties
     // The selected hue expressed as a value between 0 and 1.0
@@ -32,6 +33,7 @@ struct ContentView: View {
     var body: some View {
         VStack(spacing: 20) {
             
+            // Seleting the hue
             HStack {
                 VStack {}
                     .frame(width: 100, height: 100)
@@ -60,6 +62,7 @@ struct ContentView: View {
                 .padding(.leading)
             }
             
+            // Monochromatic palette
             VStack(alignment: .leading) {
                 // title and colour patch with the base colour, and its two darker variations
                 Text("MONOCHROMATIC")
@@ -98,6 +101,17 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        LiveContentView()
+    }
+    
+    // Create a view to simulate the App Level Entry Point -> ContentView connection
+    struct LiveContentView: View {
+        
+        // Populate with some palettes to start...
+        @State var palettes: [SavedPalette] = examplePalettes
+        
+        var body: some View {
+            ContentView(savedPalettes: $palettes)
+        }
     }
 }
