@@ -30,41 +30,47 @@ struct ContentView: View {
     
     //Interface
     var body: some View {
-        VStack {
+        VStack(spacing: 20) {
             
-            VStack {}
-                .frame(width: 200, height: 200)
-                .background(baseColour)
-            
-            Text("Hue")
-                .bold()
-            
-            Text("\(selectedHue.formatted(.number.precision(.fractionLength(1))))°")
-            
-            Slider(
-                value: $selectedHue,
-                in: 0...360,
-                label: {
+            HStack {
+                VStack {}
+                    .frame(width: 100, height: 100)
+                    .background(baseColour)
+                
+                VStack(alignment: .leading) {
                     Text("Hue")
-                },
-                minimumValueLabel: {
-                    Text("0")
-                },
-                maximumValueLabel: {
-                    Text("360")
-                })
+                        .bold()
+                    
+                    Text("\(selectedHue.formatted(.number.precision(.fractionLength(1))))°")
+                    
+                    Slider(
+                        value: $selectedHue,
+                        in: 0...360,
+                        label: {
+                            Text("Hue")
+                        },
+                        minimumValueLabel: {
+                            Text("0")
+                        },
+                        maximumValueLabel: {
+                            Text("360")
+                        }
+                    )
+                }
+                .padding(.leading)
+            }
             
-            // title and colour patch with the base colour, and its two darker variations
-            Group {
+            VStack(alignment: .leading) {
+                // title and colour patch with the base colour, and its two darker variations
                 HStack {
                     Text("MONOCHROMATIC")
-                        .padding(.leading)
-                    Spacer()
+                        .bold()
+                        .font(.caption.smallCaps())
                 }
                 
                 MonochromaticPaletteView(selectedHue: selectedHue)
-                
             }
+            
             
             Button(action: {
                 // Create a new palette instance

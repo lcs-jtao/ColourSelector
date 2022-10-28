@@ -43,21 +43,19 @@ struct MonochromaticPaletteView: View {
             
             Rectangle()
                 .foregroundColor(baseColour)
-                .frame(width: 100, height: 100)
+                .frame(width: 50, height: 50)
             
             Rectangle()
                 .foregroundColor(darkerColourOne)
-                .frame(width: 100, height: 100)
+                .frame(width: 50, height: 50)
             
             Rectangle()
                 .foregroundColor(darkerColourTwo)
-                .frame(width: 100, height: 100)
+                .frame(width: 50, height: 50)
             
             Spacer()
             
         }
-        .padding(.leading)
-        
     }
 }
 
