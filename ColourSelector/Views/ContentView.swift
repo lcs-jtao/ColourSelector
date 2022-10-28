@@ -62,25 +62,26 @@ struct ContentView: View {
             
             VStack(alignment: .leading) {
                 // title and colour patch with the base colour, and its two darker variations
+                Text("MONOCHROMATIC")
+                    .bold()
+                    .font(.caption.smallCaps())
+                
                 HStack {
-                    Text("MONOCHROMATIC")
-                        .bold()
-                        .font(.caption.smallCaps())
+                    MonochromaticPaletteView(selectedHue: selectedHue)
+                    
+                    Button(action: {
+                        // Create a new palette instance
+                        let newPalette = SavedPalette(hue: hue)
+                        
+                        // Add it to the list
+                        savedPalettes.append(newPalette)
+                    }, label: {
+                        Text("Save")
+                            .font(.subheadline.smallCaps())
+                    })
+                    .buttonStyle(.bordered)
                 }
-                
-                MonochromaticPaletteView(selectedHue: selectedHue)
             }
-            
-            
-            Button(action: {
-                // Create a new palette instance
-                let newPalette = SavedPalette(hue: hue)
-                
-                // Add it to the list
-                savedPalettes.append(newPalette)
-            }, label: {
-                Text("Save")
-            })
             
             // Show the saved palettes
             List(savedPalettes) { currentPalette in
