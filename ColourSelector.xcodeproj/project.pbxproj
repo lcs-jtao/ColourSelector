@@ -14,6 +14,7 @@
 		BF36261F290AE492001E1EF9 /* SavedPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF36261E290AE492001E1EF9 /* SavedPalette.swift */; };
 		BF362622290AE7BB001E1EF9 /* MonochromaticPaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF362621290AE7BB001E1EF9 /* MonochromaticPaletteView.swift */; };
 		BFBF7BB9290C5E4E007456BC /* SavedPalettesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBF7BB8290C5E4E007456BC /* SavedPalettesView.swift */; };
+		BFBF7BBC290C631C007456BC /* SharedFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBF7BBB290C631C007456BC /* SharedFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		BF36261E290AE492001E1EF9 /* SavedPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPalette.swift; sourceTree = "<group>"; };
 		BF362621290AE7BB001E1EF9 /* MonochromaticPaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonochromaticPaletteView.swift; sourceTree = "<group>"; };
 		BFBF7BB8290C5E4E007456BC /* SavedPalettesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPalettesView.swift; sourceTree = "<group>"; };
+		BFBF7BBB290C631C007456BC /* SharedFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				BF36260E290AD800001E1EF9 /* ColourSelectorApp.swift */,
+				BFBF7BBA290C62FA007456BC /* Functions */,
 				BF36261D290AE453001E1EF9 /* Model */,
 				BF36261C290AE44D001E1EF9 /* Views */,
 				BF362620290AE78A001E1EF9 /* Helpers */,
@@ -98,6 +101,14 @@
 				BF362621290AE7BB001E1EF9 /* MonochromaticPaletteView.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BFBF7BBA290C62FA007456BC /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				BFBF7BBB290C631C007456BC /* SharedFunctions.swift */,
+			);
+			path = Functions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +183,7 @@
 			files = (
 				BF36261F290AE492001E1EF9 /* SavedPalette.swift in Sources */,
 				BF362611290AD800001E1EF9 /* ContentView.swift in Sources */,
+				BFBF7BBC290C631C007456BC /* SharedFunctions.swift in Sources */,
 				BFBF7BB9290C5E4E007456BC /* SavedPalettesView.swift in Sources */,
 				BF362622290AE7BB001E1EF9 /* MonochromaticPaletteView.swift in Sources */,
 				BF36260F290AD800001E1EF9 /* ColourSelectorApp.swift in Sources */,

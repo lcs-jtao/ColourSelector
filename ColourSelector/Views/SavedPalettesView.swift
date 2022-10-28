@@ -62,32 +62,18 @@ struct SavedPalettesView: View {
                 .padding(.leading)
             }
             
-            // Monochromatic palette
-            VStack(alignment: .leading) {
-                // title and colour patch with the base colour, and its two darker variations
-                Text("MONOCHROMATIC")
-                    .bold()
-                    .font(.caption.smallCaps())
-                
-                HStack {
-                    MonochromaticPaletteView(selectedHue: selectedHue)
-                    
-                    Button(action: {
-                        // Create a new palette instance
-                        let newPalette = SavedPalette(hue: hue)
-                        
-                        // Add it to the list
-                        savedPalettes.append(newPalette)
-                    }, label: {
-                        Text("Save")
-                            .font(.subheadline.smallCaps())
-                    })
-                    .buttonStyle(.bordered)
-                }
+            // Showing the reset button
+            HStack {
+                Spacer()
+                Button(action: {
+                    selectedHue = 0.0
+                }, label: {
+                    Text("Reset")
+                })
             }
             
             // Show the saved palettes
-            List(savedPalettes) { currentPalette in
+            List(filtered(by: hue, from: savedPalettes)) { currentPalette in
                 
                 MonochromaticPaletteView(selectedHue: currentPalette.hue * 360)
                 
