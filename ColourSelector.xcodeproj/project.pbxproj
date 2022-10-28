@@ -13,6 +13,7 @@
 		BF362616290AD802001E1EF9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF362615290AD802001E1EF9 /* Preview Assets.xcassets */; };
 		BF36261F290AE492001E1EF9 /* SavedPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF36261E290AE492001E1EF9 /* SavedPalette.swift */; };
 		BF362622290AE7BB001E1EF9 /* MonochromaticPaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF362621290AE7BB001E1EF9 /* MonochromaticPaletteView.swift */; };
+		BFBF7BB9290C5E4E007456BC /* SavedPalettesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBF7BB8290C5E4E007456BC /* SavedPalettesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		BF362615290AD802001E1EF9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BF36261E290AE492001E1EF9 /* SavedPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPalette.swift; sourceTree = "<group>"; };
 		BF362621290AE7BB001E1EF9 /* MonochromaticPaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonochromaticPaletteView.swift; sourceTree = "<group>"; };
+		BFBF7BB8290C5E4E007456BC /* SavedPalettesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPalettesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				BF362610290AD800001E1EF9 /* ContentView.swift */,
+				BFBF7BB8290C5E4E007456BC /* SavedPalettesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			files = (
 				BF36261F290AE492001E1EF9 /* SavedPalette.swift in Sources */,
 				BF362611290AD800001E1EF9 /* ContentView.swift in Sources */,
+				BFBF7BB9290C5E4E007456BC /* SavedPalettesView.swift in Sources */,
 				BF362622290AE7BB001E1EF9 /* MonochromaticPaletteView.swift in Sources */,
 				BF36260F290AD800001E1EF9 /* ColourSelectorApp.swift in Sources */,
 			);
